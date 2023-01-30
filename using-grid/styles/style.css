@@ -1,0 +1,117 @@
+@import url(./reset.css);
+
+/* Layout Visualization Helpers */
+body {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    outline: 1px dashed #ddd;
+}
+
+header, main, aside, footer {
+    outline: 1px dashed #ccc;
+}
+
+/* Defaults */
+h1 { font-size: 3.4em }
+
+h2 { font-size: 2.1em }
+
+p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin: 0.5em 0;
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover {
+    color: #005bbc;
+}
+
+/* USING GRID */
+/* https://www.youtube.com/watch?v=9zBsdzdE4sM */
+
+/* Base Layout */
+body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+            "header header"
+            "aside main"
+            "footer footer";
+    gap: 1em;
+    justify-content: center;
+}
+header {
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+}
+
+/* Header Nav */
+
+header{
+    display:grid;
+    justify-items: center;
+}
+header > nav {
+    width: 100%;
+    background-color: #b3dafe;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+}
+
+header > nav > ul {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-start: 2fr;
+    
+}
+
+header > nav > ul > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+}
+
+header > nav > ul > li > a:hover {
+    background-color: #8cc7ff;
+}
+
+/* Header H1 */
+header > h1 {
+    margin: 1em 0;
+}
+
+/* Footer */
+footer {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer Nav */
+footer > nav > ul {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+}

@@ -1,0 +1,116 @@
+@import url(./reset.css);
+
+/* Layout Visualization Helpers */
+header, main, aside, footer{
+    outline: 1px dashed #ccc;
+}
+body {
+    outline: 1px dashed #ddd;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Defaults */
+h1 {
+    font-size: 3.4em;
+}
+h2 {
+    font-size: 2.1em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin:0.5em;
+}
+
+a {
+    color: #007bff;
+}
+a:hover{
+    color: #005bbc
+}
+
+/* USING POSITIONING */
+/* Header */
+header {
+    position: relative;
+    height: 200px;
+    margin-bottom: 20px;
+
+}
+
+/* Header Nav */
+header > nav {
+    position:relative;
+    background-color: #b3dafe;
+    height: 40px;
+    
+}
+
+header> nav > ul {
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+header > nav > ul > li{
+    display: inline-block;
+    
+}
+
+header > nav >ul > li > a{
+    display: table-cell;
+    width: 60px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+header > nav > ul > li > a:hover{
+    background-color: #8cc7ff;
+}
+/* Header H1 */
+header > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Header Slogan */
+header >h1 + p{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-53%);
+}
+
+/* Main/Aside Layout */
+
+main {
+    float: right;
+    width: 70%;
+    
+}
+aside {
+    width: 30%;
+}
+.content::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Footer */
+footer{
+    margin-top: 20px;
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer Nav */
+footer > nav > ul > li {
+    display: inline-block;
+}
